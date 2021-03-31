@@ -34,7 +34,7 @@ public class XlsTest {
 
     @Test
         void xlsxTest() {
-        String xlsFilePath = "./src/test/resources/m.xls";
+        String xlsFilePath = "./src/test/resources/m.xlsx";
         String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
 
         String actualData = readXlsxFromPath(xlsFilePath);
