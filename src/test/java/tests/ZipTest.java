@@ -15,14 +15,14 @@ public class ZipTest {
     @Test
         void xlsSimple () throws IOException, ZipException {
             String zipFilePath = "./src/test/resources/m.zip";
-            String unzipFolderPath = "./src/test/resources/files/unzip";
+            String unzipFolderPath = "./src/test/resources/unzip";
             String pass = "";
-            String unziptxtFilePath = "./src/test/resources/unzio/m.txt";
+            String unziptxtFilePath = "./src/test/resources/unzip/m.txt";
             String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
 
-            unZip(zipFilePath, unziptxtFilePath, pass);
+            unZip(zipFilePath, unzipFolderPath, pass);
 
-        String actualData = readTextFromPath(zipFilePath);
+        String actualData = readTextFromPath(unziptxtFilePath);
         assertThat(actualData, containsString(expectedData));
         }
 
