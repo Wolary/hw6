@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import static com.codeborne.pdftest.PDF.containsText;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static utils.Files.getFile;
+import static utils.Files.getPdf;
 
 public class PDFTest {
 
@@ -16,7 +16,7 @@ public class PDFTest {
             String pdfFilePath = "./src/test/resources/m.pdf";
             String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
 
-        PDF pdf = new PDF(getFile(pdfFilePath));
+        PDF pdf = new PDF(getPdf(pdfFilePath));
         assertThat(pdf, containsText(expectedData));
         }
 

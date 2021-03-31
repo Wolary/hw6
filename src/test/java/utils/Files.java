@@ -9,15 +9,15 @@ import java.nio.charset.StandardCharsets;
 public class Files {
 
     public static String readTextFromPath(String path) throws IOException {
-                return readTextFromFile(getFile(path));
+                File file = new File(path);
+                return readTextFromFile(file);
     }
-
 
     public static String readTextFromFile(File file) throws IOException {
         return FileUtils.readFileToString(file, StandardCharsets.UTF_8);
     }
 
-    public static File getFile(String path) {
+    public static File getPdf(String path) {
         return new File(path);
     }
 }
