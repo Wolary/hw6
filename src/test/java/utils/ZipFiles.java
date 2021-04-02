@@ -12,8 +12,5 @@ public class ZipFiles {
             zipFile.setPassword(pas);
         }
         zipFile.extractAll(unzippath);
-
     }
-
-
 }
