@@ -12,19 +12,19 @@ import static utils.ZipFiles.unZip;
 
 public class ZipTest {
 
-    @Test
-        void xlsSimple () throws IOException, ZipException {
-            String zipFilePath = "./src/test/resources/m.zip";
-            String unzipFolderPath = "./src/test/resources/unzip";
-            String pass = "";
-            String unziptxtFilePath = "./src/test/resources/unzip/m.txt";
-            String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
+@Test
+    void xlsSimple () throws IOException, ZipException {
+        String zipFilePath = "./src/test/resources/m.zip";
+        String unzipFolderPath = "./src/test/resources/unzip";
+        String pass = "";
+        String unziptxtFilePath = "./src/test/resources/unzip/m.txt";
+        String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
 
-            unZip(zipFilePath, unzipFolderPath, pass);
+        unZip(zipFilePath, unzipFolderPath, pass);
 
-        String actualData = readTextFromPath(unziptxtFilePath);
-        assertThat(actualData, containsString(expectedData));
-        }
+    String actualData = readTextFromPath(unziptxtFilePath);
+    assertThat(actualData, containsString(expectedData));
+    }
 
 
 }
