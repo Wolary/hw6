@@ -10,13 +10,13 @@ import static utils.Files.readTextFromPath;
 
 public class TxtTest {
 
-@Test
-void txtTest () throws IOException {
-    String txtFilePath = "./src/test/resources/m.txt";
-    String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
+    @Test
+    void txtTest() throws IOException {
+        String txtFilePath = "./src/test/resources/m.txt";
+        String expectedData = "Десять тысяч обезьян, в жопу сунули банан";
 
-    String actualData = readTextFromPath(txtFilePath);
-    assertThat(actualData, containsString(expectedData));
-}
+        String actualData = readTextFromPath(txtFilePath);
+        assertThat(actualData, containsString(expectedData));
+    }
 
 }

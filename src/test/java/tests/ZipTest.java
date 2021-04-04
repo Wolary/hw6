@@ -12,8 +12,8 @@ import static utils.ZipFiles.unZip;
 
 public class ZipTest {
 
-@Test
-    void xlsSimple () throws IOException, ZipException {
+    @Test
+    void xlsSimple() throws IOException, ZipException {
         String zipFilePath = "./src/test/resources/m.zip";
         String unzipFolderPath = "./src/test/resources/unzip";
         String pass = "";
@@ -22,8 +22,8 @@ public class ZipTest {
 
         unZip(zipFilePath, unzipFolderPath, pass);
 
-    String actualData = readTextFromPath(unziptxtFilePath);
-    assertThat(actualData, containsString(expectedData));
+        String actualData = readTextFromPath(unziptxtFilePath);
+        assertThat(actualData, containsString(expectedData));
     }
 
 
